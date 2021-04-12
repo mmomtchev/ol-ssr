@@ -1,0 +1,32 @@
+{
+  "name": "ol-ssr",
+  "version": "1.0.0",
+  "description": "Wrapper for openlayers in Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-specifier-resolution=node test/render.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmomtchev/ol-ssr.git"
+  },
+  "keywords": [
+    "openlayers",
+    "gis",
+    "node.js",
+    "ssr",
+    "next.js"
+  ],
+  "author": "Momtchil Momtchev <momtchil@momtchev.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmomtchev/ol-ssr/issues"
+  },
+  "homepage": "https://github.com/mmomtchev/ol-ssr#readme",
+  "peerDependencies": {
+    "ol": ">=6.0.0",
+    "canvas": "^2.7.0",
+    "jsdom": "^16.5.0"
+  }
+}
