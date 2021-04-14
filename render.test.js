@@ -1,5 +1,5 @@
-import { window, document } from '../src/dom.js';
-import { decodeDataURL } from '../src/dom-handlers';
+import { window, document } from './dom.js';
+import { decodeDataURL } from './dom-handlers';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as ol from 'ol';

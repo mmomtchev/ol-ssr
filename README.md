@@ -1,5 +1,18 @@
 # ol-ssr
 
-This is a simple wrapper around openlayers using a monkey-patched jsdom that allows Server-Side Rendering in Node.js
+This is a simple wrapper around *OpenLayers* using a monkey-patched jsdom that allows Server-Side Rendering in Node.js
 
-The current version requires that you add `"type": "module"` to `package.json` in `ol` and `ol-mapbox-style`. I am still looking for an elegant solution that does not involve transpiling.
+It is meant to be used as a plugin for [rlayers](https://www.npmjs.com/package/rlayers)
+
+A stand-alone test example is included in `render.test.js` and can be used as an inspiration for your own implementation.
+
+If you want to run it, there is a transpiled version in the NPM package: `index.cjs`
+
+## Usage
+
+```
+# Once you have rlayers installed
+npm install --save ol-ssr jsdom canvas
+```
+
+It will enable the `RSSRender()` call in rlayers

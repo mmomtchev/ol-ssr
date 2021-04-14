@@ -2,10 +2,12 @@
   "name": "ol-ssr",
   "version": "1.0.0",
   "description": "Wrapper for openlayers in Node.js",
-  "main": "index.js",
+  "main": "index.cjs",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-specifier-resolution=node app/render.test.js"
+    "build": "rollup -c",
+    "test": "node index.cjs",
+    "es6test": "node --experimental-specifier-resolution=node render.test.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,21 @@
     "ol": ">=6.0.0",
     "canvas": "^2.7.0",
     "jsdom": "^16.5.0"
+  },
+  "dependencies": {
+    "canvas": "^2.7.0",
+    "jsdom": "^16.5.3",
+    "ol": "^6.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "bufferutil": "^4.0.3",
+    "builtin-modules": "^3.2.0",
+    "rollup": "^2.45.2",
+    "rollup-plugin-executable": "^1.6.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "utf-8-validate": "^5.0.4"
   }
 }
