@@ -36,7 +36,7 @@ import * as ollayer from 'ol/layer';
             image = e.context.canvas.toDataURL();
         });
         map.once('rendercomplete', () => {
-            console.log('render complete');
+            console.log('render complete, writing out.png');
             clearTimeout(tm);
             const raw = decodeDataURL(image);
             fs.writeFileSync('out.png', raw);

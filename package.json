@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-specifier-resolution=node test/render.test.js"
+    "test": "node --experimental-specifier-resolution=node app/render.test.js"
   },
   "repository": {
     "type": "git",
