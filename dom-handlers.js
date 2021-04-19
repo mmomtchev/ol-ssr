@@ -66,6 +66,9 @@ export function initDOM(window) {
         Object.defineProperty(global, 'requestAnimationFrame', { value: window.requestAnimationFrame });
     if (!Object.getOwnPropertyDescriptor(global, 'Image'))
         Object.defineProperty(global, 'Image', { value: window.Image });
+    for (const p of Object.keys(Object.getOwnPropertyDescriptors(window)).filter(p => p.startsWith('HTML')))
+        if (!Object.getOwnPropertyDescriptor(global, p))
+            Object.defineProperty(global, p, { value: window[p] });
 }
 
 export function decodeDataURL(url) {
